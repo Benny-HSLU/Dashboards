@@ -34,14 +34,14 @@ for i in wohnung_options:
 st.sidebar.write("---")
 
 # --- SIDEBAR UNTEN: ZEITRAUM ---
-st.sidebar.subheader("📅 Analyse-Zeitraum")
+st.sidebar.subheader("Analyse-Zeitraum")
 date_range = st.sidebar.date_input(
     "Zeitraum wählen",
     [df['Zeitreihe'].min(), df['Zeitreihe'].max()]
 )
 
 # --- HAUPTBEREICH ---
-st.title("⚙️ Technisches Monitoring (Verwaltung)")
+st.title("Technisches Monitoring (Verwaltung)")
 
 if len(date_range) == 2 and len(selected_wohnungen) > 0:
     mask = (df['Zeitreihe'].dt.date >= date_range[0]) & (df['Zeitreihe'].dt.date <= date_range[1])
@@ -125,7 +125,7 @@ if len(date_range) == 2 and len(selected_wohnungen) > 0:
 
     # --- 2. Calendar Heatmaps ---
     st.divider()
-    st.subheader("📅 Zeitliche Heatmaps (Mittelwert der gewählten Wohnungen)")
+    st.subheader("Zeitliche Heatmaps (Mittelwert der gewählten Wohnungen)")
 
     f_df['Woche'] = f_df['Zeitreihe'].dt.isocalendar().week
     f_df['Wochentag'] = f_df['Zeitreihe'].dt.strftime('%a')
@@ -165,7 +165,7 @@ if len(date_range) == 2 and len(selected_wohnungen) > 0:
 
     # --- 3. Wöchentlicher Trend ---
     st.divider()
-    st.subheader("🗓️ Wöchentlicher Trend (Durchschnitt nach Wochentag pro Wohnung)")
+    st.subheader("Wöchentlicher Trend (Durchschnitt nach Wochentag pro Wohnung)")
 
     temp_long = f_df.melt(id_vars=['Zeitreihe', 'Wochentag'], value_vars=selected_temp_cols, var_name='Wohnung',
                           value_name='Temp')

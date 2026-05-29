@@ -16,7 +16,7 @@ def load_data():
 try:
     df = load_data()
 
-    st.title("🔍 Daten-Integrität & Debugging")
+    st.title("Daten-Integrität & Debugging")
     st.info(
         "Hier werden alle Spalten des CSV-Files einzeln visualisiert, um Unregelmäßigkeiten in den Rohdaten zu finden.")
 
@@ -26,7 +26,7 @@ try:
         st.sidebar.write("\n")
 
     st.sidebar.divider()
-    st.sidebar.subheader("⚙️ Debug-Filter")
+    st.sidebar.subheader("Debug-Filter")
 
     # Zeitraum-Auswahl
     date_range = st.sidebar.date_input(

@@ -41,7 +41,7 @@ date_range = st.sidebar.date_input(
 )
 
 # --- HAUPTBEREICH ---
-st.title("🏠 Wohnkomfort Übersicht")
+st.title("Wohnkomfort Übersicht")
 
 if len(date_range) == 2 and len(selected_wohnungen) > 0:
     start_date, end_date = date_range
