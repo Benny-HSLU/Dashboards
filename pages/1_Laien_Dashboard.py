@@ -83,7 +83,7 @@ if len(date_range) == 2 and len(selected_wohnungen) > 0:
 
     # --- 3. Density Plots ---
     st.divider()
-    st.subheader("📊 Häufigkeitsverteilung (Wo lagen die Werte meistens?)")
+    st.subheader("Häufigkeitsverteilung (Wo lagen die Werte meistens?)")
 
     density_col1, density_col2 = st.columns(2)
 
